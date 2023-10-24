@@ -1,0 +1,64 @@
+
+.Home-Container{
+    background-image: url('./../../../images/logo/MainLogo.webp');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    height: 490px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+}
+.Home-Container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    color: var(--primary);
+}
+.Home-Info{
+    text-align: left;
+    margin-top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    padding: 0 1.5rem;
+}
+.Home-Info h2{
+   font-size: 3.5rem;
+   font-weight: 500;
+}
+.Home-Info p{
+   font-size: 1.3rem;
+}
+
+@media screen and (max-width:760px) {
+    .Home-Container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr); 
+    }
+    .Home-Container .div{
+        display: none;
+    }
+    .Home-Container .Home-Info{
+        margin-top: 10%;
+        transform: translateY(0);
+    }
+    .Home-Info h2{
+        font-size: 3rem;
+     }
+     .Home-Info p{
+        font-size: 1.2rem;
+     }
+}
+
+@media screen and (max-width:435px) {
+    .Home-Info h2{
+        font-size: 2.7rem;
+     }
+     .Home-Info p{
+        font-size: 1.1rem;
+     }
+}

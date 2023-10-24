@@ -1,0 +1,275 @@
+
+.Product-All{
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    border-bottom: 1px solid var(--border) ;
+    border-top: 1px solid var(--border) ;
+    padding: 10px 0;
+}
+
+.Container-SideBar{
+    width: 170px;
+    border-right: 2px solid var(--border);
+}
+
+.Container-SideBar h5{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 0 5px 10px;
+}
+
+.Container-SideBar h5{
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+    text-transform: uppercase;
+}
+
+.Container-SideBar button{
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin:  10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background: var(--background);
+    color: var(--black);
+    cursor: pointer;
+}
+.Container-SideBar button:hover{
+    background: var(--black);
+    color: var(--background);
+}
+.Products-Show{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.Products-Show-Info{
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    position: relative;
+    cursor: auto;
+    overflow: hidden;
+}
+.Products-Show-Info .Products-Show-Img{
+    height: 250px;
+    position: relative;
+    background: var(--background);
+    margin-bottom: 15px; 
+    cursor: pointer ;
+}
+.Products-Show-Info .Products-Show-Img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    pointer-events: none;
+    transition: 0.6s;
+}
+.Products-Show-Span{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    color: var(--black);
+}
+
+
+.Products-Show-Icon{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    right: -100px;
+    top: 50px;
+    transition: 0.2s;
+}
+.Products-Show-Icon i{
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--black);
+    background: var(--white);
+    cursor: pointer;
+}
+.Products-Show-Info:hover .Products-Show-Icon{
+    right: 5px;
+}
+
+@media screen and (max-width:720px) {
+    .Products-Show{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Products-Show-Info .Products-Show-Img img{
+        object-fit: contain;
+    }
+}
+@media screen and (max-width:500px) {
+    .Product-All{
+        display: flex;
+        gap: 5px;
+    }
+   
+    .Products-Show{
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+    }
+        
+    .Container-SideBar{
+        width: 140px;
+    }
+    .Container-SideBar h5{
+        font-size: 18px;
+        padding: 5px 0 5px 5px;
+    }
+    .Products-Show-Info .Products-Show-Img img{
+        object-fit: contain;
+    }
+}
+
+.PhoneImg{
+    object-fit:scale-down;
+}
+
+/* Start Details */
+
+.DetailsWord{
+    background: var(--background);
+    padding: 30px;
+    
+}
+.DetailsWord p{
+    color:#fff;
+}
+.DetailsWord p span{
+    color: var(--icon);
+    margin-left: 5px;
+}
+.Details-Container{
+    display: flex;
+    margin: 30px 0;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--background);
+}
+
+.Details-Info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.Details-Info h1{
+    font-size: 20px;
+}
+.Details-Info p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black);
+}
+.Details-Info span{
+    color: olive;
+    font-size: 20px;
+    font-weight: 600;
+}
+.AddCart{
+    width: 100%;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background: var(--background);
+    color: var(--black);
+    border: 1px solid var(--black);
+    cursor: pointer;
+
+}
+.Back{
+    width: 120px;
+    height: 35px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    border-radius: 5px;
+    border: none;
+    background: var(--background);
+    color: var(--black);
+    border: 1px solid var(--black);
+    cursor: pointer;
+}
+.Back:hover{
+    background: var(--black);
+    color: var(--background);
+}
+.Details-Image{
+    width: 50%;
+}
+
+@media screen and (max-width:696px) {
+    .Details-Container{
+        flex-direction: column;
+    }
+
+    .Details-Info h1{
+        font-size: 18px;
+    }
+    .Details-Info p{
+        font-size: 17px;
+    }
+    .Details-Info span{
+        color: olive;
+        font-size: 18px;
+    }
+    .AddCart{
+        width:70%;
+    }
+    .Back{
+        width: 110px;
+    }
+    .Back:hover{
+        background: var(--black);
+        color: var(--background);
+    }
+    .Details-Image{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:370px) {
+    
+    .Details-Info h1{
+        font-size: 16px;
+    }
+    .Details-Info p{
+        font-size: 17px;
+    }
+    .Details-Info span{
+        font-size: 18px;
+    }
+    .AddCart{
+        width: 80%;
+        height: 40px;
+    }
+    .Back{
+        width: 100px;
+    }
+
+    .Details-Image{
+        width: 100%;
+    }
+}
+

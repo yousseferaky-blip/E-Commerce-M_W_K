@@ -1,0 +1,86 @@
+
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+.Header-Logo{
+    font-size: 1.4rem;
+}
+.Header ul{
+    display: flex;
+    font-size: 1.2rem;
+}
+.Header ul  li{
+    margin-right: 20px;
+}
+.Header ul  li a{
+    font-size: 1.1rem;
+}
+.Header ul  li:hover{
+  border-bottom: 1px solid var(--secondary);
+}
+.Header ul  li .active{
+    border-bottom: 1px solid var(--secondary);
+}
+.Header-Icon{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.4rem;
+}
+.Header-Icon i{
+    cursor: pointer;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.Header-Icon i span{
+    position: absolute;
+    top: -11px;
+    right: 0px;
+    font-size: 14px;
+    color: orangered;
+}
+.fa-bars-fa-times{
+    display: none;
+}
+
+@media screen and (max-width:760px) {
+    .fa-bars-fa-times{
+        display: block;
+    }
+    .Header .Nav-Mobil{
+        display: none;
+    }
+    .Header .Nav-Link{
+        position: absolute;
+        top: 63px;
+        z-index: 99; 
+        display: block;
+        padding-top: 15px;
+        width: 90%;
+        background:rgb(170, 168, 173);
+    }
+    .Header .Nav-Link li{
+       padding: 15px 5px;
+       width: 100%;
+       border-bottom: 1px solid var(--border);
+    }
+    .Header ul  li:hover{
+        border-bottom: 1px solid var(--border);
+    }
+    .Header ul  li .active{
+        border-bottom: none;
+    }
+}
+
+
+
+
+
+
+

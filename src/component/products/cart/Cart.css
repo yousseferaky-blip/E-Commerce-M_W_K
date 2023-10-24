@@ -1,0 +1,116 @@
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding:  10px;
+    border-bottom: 2px solid var(--border);
+}
+
+.cart-item-img{
+    width: 100px;
+}
+.cart-item-img img{
+    width: 100%;
+}
+
+.cart-item-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item-info h4{
+    font-size: 18px;
+}
+
+.cart-item-info-Price{
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.cart-item-info button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    background: rgb(212, 34, 34);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    outline: none;
+}
+.cart-item-info button:hover{
+    background: white;
+    color: rgb(212, 34, 34);
+    border: 1px solid rgb(212, 34, 34);
+}
+
+.cart-item-Count{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-Count button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+
+}
+.cart-item h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+
+}
+.cart-item h2 span{
+    color: orangered;
+}
+
+.Total{
+    padding: 10px ;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    border: 1px solid var(--border);
+}
+.Total h1{
+    color: #888585;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 10px;
+    border-right: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    padding: 0 10px;
+}
+
+.Noproducts{
+    text-align: center;
+    margin: 20px 0;
+    color: #888585;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    padding: 10px;
+
+}
+
+@media screen and (max-width:615px) {
+    .cart-item{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
